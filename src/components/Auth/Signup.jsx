@@ -28,12 +28,12 @@ const Signup = () => {
 
       const token = "mockToken12";
       localStorage.setItem("token",token);
-      alert("Succesfull");
+      alert("Signup Successfull !");
       navigate("/login")
     }
     catch(err){
       console.log(err.message);
-      alert("Failed")
+      alert("Signup Failed")
     }
   };
 
