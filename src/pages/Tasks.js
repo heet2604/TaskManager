@@ -8,11 +8,11 @@ const Tasks = () => {
     const [editingTask, setEditingTask] = useState(null);
     const [taskTitle, setTaskTitle] = useState('');
     const [taskDescription, setTaskDescription] = useState('');
-    const [menu, setmenu] = useState(null);  // For Menu anchor element
-    const [user, setUser] = useState({});  // For user details
+    const [menu, setmenu] = useState(null);  // Menu  (top right corner)
+    const [user, setUser] = useState({});  // user details
     const navigate = useNavigate();
 
-    // Check for token when the component mounts and redirect if not logged in
+    // Check for token when the component loads and redirect if not logged in
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
@@ -22,7 +22,7 @@ const Tasks = () => {
         const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         setTasks(storedTasks);
 
-        // Mock user data (In a real app, you'd fetch this from an API)
+        // Mock user data
         const mockUser = { name: "Random User" };  // Replace with real user data
         setUser(mockUser);
     }, [navigate]);
