@@ -16,7 +16,7 @@ const Login = ()=>{
             }
             if(email === mockUser.email && password===mockUser.password){
                 localStorage.setItem("token",mockUser.token);
-                alert("Login Success");
+                alert("Login Successfull !");
                 navigate("/tasks");
             }
             else{
