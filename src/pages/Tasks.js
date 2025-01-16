@@ -55,7 +55,7 @@ const Tasks = () => {
 
     // Delete task
     const deleteTask = (taskId) => {
-        const updatedTasks = tasks.filter((tsk) => tsk.id !== taskId);
+        const updatedTasks = tasks.filter((tsk) => tsk.id !== taskId);    //removes the task whose id matches with the tsk.id(currently iterated)
         localStorage.setItem('tasks', JSON.stringify(updatedTasks));
         setTasks(updatedTasks);
     };
